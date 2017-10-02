@@ -8,8 +8,9 @@ html {
 
 // Style the buttons inside the tab */
 .tab {
-  background-color: $navbar-background-color;
-  border: 3px ridge $black;
+  background-color: $beige;
+  border: 3px ridge $davys-grey;
+  border-style: ridge;
   overflow: hidden;
   text-align: center;
 
@@ -26,14 +27,14 @@ html {
 
 // Style the tab content */
 .tabcontent {
-  background-color: $main-div-background;
+  background-color: $nyanza;
   border-top: 0;
   display: none;
   padding: 6px 12px;
 }
 
 body {
-  background-color: $main-div-background;
+  background-color: $nyanza;
 }
 
 .header {
@@ -42,34 +43,34 @@ body {
 }
 
 .sidebar {
-  background-color: $sidebar--background-color;
+  background-color: $russian-green;
   border-color: $davys-grey;
   border-style: ridge;
-  color: $sidebar-font-color;
+  color: $sandy-brown;
   grid-area: sidebar;
   min-height: 100%;
   text-align: left;
 
   button {
-    background-color: $sidebar-font-color;
+    background-color: $sandy-brown;
     border-color: $davys-grey;
     color: $davys-grey;
   }
 }
 
 .footer {
-  background-color: $sidebar--background-color;
+  background-color: $bisque;
   bottom: 0;
   grid-area: footer;
   left: 0;
   padding: 1rem;
-  position: absolute;
+  position: fixed;
   right: 0;
   text-align: center;
 }
 
 .content {
-  background-color: $main-div-background;
+  background-color: $nyanza;
   color: $black;
   grid-area: content;
   text-align: left;
@@ -77,4 +78,18 @@ body {
 
 h1 {
   text-align: center;
+}
+
+th,
+td {
+  border: 1px solid $black;
+  height: 40px;
+  text-align: center;
+  width: 40px;
+
+  input {
+    height: 40px;
+    text-align: center;
+    width: 40px;
+  }
 }
