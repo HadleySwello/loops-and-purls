@@ -1,2 +1,80 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'colors';
+
+html {
+  min-height: 100%;
+}
+
+// Style the buttons inside the tab */
+.tab {
+  background-color: $navbar-background-color;
+  border: 3px ridge $black;
+  overflow: hidden;
+  text-align: center;
+
+  button {
+    background-color: inherit;
+    border: 0;
+    margin: auto;
+    outline: none;
+    padding: 14px 16px;
+    text-align: center;
+    transition: .3s;
+  }
+}
+
+// Style the tab content */
+.tabcontent {
+  background-color: $main-div-background;
+  border-top: 0;
+  display: none;
+  padding: 6px 12px;
+}
+
+body {
+  background-color: $main-div-background;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+}
+
+.sidebar {
+  background-color: $sidebar--background-color;
+  border-color: $davys-grey;
+  border-style: ridge;
+  color: $sidebar-font-color;
+  grid-area: sidebar;
+  min-height: 100%;
+  text-align: left;
+
+  button {
+    background-color: $sidebar-font-color;
+    border-color: $davys-grey;
+    color: $davys-grey;
+  }
+}
+
+.footer {
+  background-color: $sidebar--background-color;
+  bottom: 0;
+  grid-area: footer;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.content {
+  background-color: $main-div-background;
+  color: $black;
+  grid-area: content;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+}

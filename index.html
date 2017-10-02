@@ -1,25 +1,169 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Loops & Purls</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <h1>Loops & Purls</h1>
+  <!-- navbar -->
+  <div class="tab">
+    <button id="landingPageBtn" class="tablinks">Welcome</button>
+    <button id="aboutPageBtn" class="tablinks">About</button>
+    <button id="chartPageBtn" class="tablinks">Chart Maker</button>
+    <button id="myPatternsPageBtn" class="tablinks">Your Patterns</button>
+  </div>
+
+  <!-- div one -->
+  <div id="landingPage" class="tabcontent">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <h2>Symbol Key</h2>
+        <ul>
+          <li> - : Knit</li>
+          <li> . : Purl</li>
+          <li> / : K2Tog</li>
+          <li> \ : SSK</li>
+          <li> O : Yarn Over</li>
+          <li> ^ : Sl1, K2Tog, PSSO</li>
+        </ul>
+
+        <br></br>
+        <button type="button" class="sign-out">Sign Out</button>
+        <br></br>
+
+      </div>
+      <div class="col-md-10 content">
+        <div class="row text-center">
+          <h3 class="col-md-12">Welcome!</h3>
+        </div>
+        <p>Sign In or Sign Up to save patterns or recall previously saved patterns.</p>
+
+        <form id="sign-up" class="sign-up">
+          <fieldset>
+            <legend>Sign Up Below</legend>
+            <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
+            <br><br>
+            <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Create Password">
+            <br><br>
+            <input class="pass-confir-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <br><br>
+            <button class="signup-button btn-default" type="submit" name="submit" value="Sign Up!">Sign Up!</button>
+          </fieldset>
+        </form>
+
+        <form id="sign-in" class="sign-in">
+          <fieldset>
+            <legend>Login Below</legend>
+            <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
+            <br><br>
+            <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Password">
+            <br><br>
+            <button class="signin-button btn-default" type="submit" id="sign-in-button" name="submit" value="Sign In!">Sign In!</button>
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="aboutPage" class="tabcontent">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <h2>Symbol Key</h2>
+        <ul>
+          <li> - : Knit</li>
+          <li> . : Purl</li>
+          <li> / : K2Tog</li>
+          <li> \ : SSK</li>
+          <li> O : Yarn Over</li>
+          <li> ^ : Sl1, K2Tog, PSSO</li>
+        </ul>
+
+        <br></br>
+        <button type="button" class="sign-out">Sign Out</button>
+        <br></br>
+
+      </div>
+      <div class="col-md-10 content">
+        <div class="row text-center">
+          <h3 class="col-md-12">About The Site!</h3>
+        </div>
+        <p>I will write all about the site.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="chartPage" class="tabcontent">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <h2>Symbol Key</h2>
+        <ul>
+          <li> - : Knit</li>
+          <li> . : Purl</li>
+          <li> / : K2Tog</li>
+          <li> \ : SSK</li>
+          <li> O : Yarn Over</li>
+          <li> ^ : Sl1, K2Tog, PSSO</li>
+        </ul>
+
+        <br></br>
+        <button type="button" class="sign-out">Sign Out</button>
+        <br></br>
+
+      </div>
+      <div class="col-md-10 content">
+        <div class="row text-center">
+          <h3 class="col-md-12">Let's Get Designing!</h3>
+        </div>
+        <p>Here is where the chart will go.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="myPatternsPage" class="tabcontent">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <h2>Symbol Key</h2>
+        <ul>
+          <li> - : Knit</li>
+          <li> . : Purl</li>
+          <li> / : K2Tog</li>
+          <li> \ : SSK</li>
+          <li> O : Yarn Over</li>
+          <li> ^ : Sl1, K2Tog, PSSO</li>
+        </ul>
+
+        <br></br>
+        <button type="button" class="sign-out">Sign Out</button>
+        <br></br>
+
+      </div>
+      <div class="col-md-10 content">
+        <div class="row text-center">
+          <h3 class="col-md-12">Here Are Your Patterns!</h3>
+        </div>
+        <p>Here is where the chart will go.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    CopyRight & Design @ Hadley Sweck 2017
+  </footer>
+
+</body>
+
 </html>
