@@ -27,6 +27,7 @@
   <div id="landingPage" class="tabcontent">
     <div class="row">
       <div class="col-md-2 sidebar">
+        <p id="message"></p>
         <h2>Symbol Key</h2>
         <ul>
           <li> - : Knit</li>
@@ -38,7 +39,9 @@
         </ul>
 
         <br></br>
+
         <button type="button" class="sign-out">Sign Out</button>
+
         <br></br>
 
       </div>
@@ -55,9 +58,9 @@
             <br><br>
             <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Create Password">
             <br><br>
-            <input class="pass-confir-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input class="pass-confirm-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
             <br><br>
-            <button class="signup-button btn-default" type="submit" name="submit" value="Sign Up!">Sign Up!</button>
+            <button class="sign-up-button btn-default" id="sign-up-button" type="submit" name="submit" value="Sign Up!">Sign Up!</button>
           </fieldset>
         </form>
 
@@ -68,8 +71,9 @@
             <br><br>
             <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Password">
             <br><br>
-            <button class="signin-button btn-default" type="submit" id="sign-in-button" name="submit" value="Sign In!">Sign In!</button>
+            <button class="sign-in-button btn-default" type="submit" id="sign-in-button" name="submit" value="Sign In!">Sign In!</button>
           </fieldset>
+          <br></br>
         </form>
 
       </div>
@@ -98,8 +102,8 @@
         <div class="row text-center">
           <h3 class="col-md-12 header">About The Site!</h3>
         </div>
-        <p>I will write all about the site.</p>
-
+        <br></br>
+        <p class="aboutpara">This web app was developed to help knitters who want to take pattern creation into their own hands! You can make a standard 10x10 graph pattern and be able to save and update it. Soon you can even print out your pattern into an easily readable paragraph for those who have trouble with charts. Unfortunately there is only one pattern size at the moment but soon I will add updates that add different pattern sizes and a screen shot option so you can save a copy of your pattern right to your computer! As more updates come up and new features get added please check back to see what’s in store!</p>
       </div>
     </div>
   </div>
@@ -128,156 +132,7 @@
         </div>
 
         <div id="chart" class="chart">
-          <form>
-            <table>
-              <tr class="row-header">
-                <th>*</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
-                <th>10</th>
-              </tr>
-              <tr class="row1">
-                <th>1</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row2">
-                <th>2</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row3">
-                <th>3</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row4">
-                <th>4</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row5">
-                <th>5</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row6">
-                <th>6</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row7">
-                <th>7</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row8">
-                <th>8</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row9">
-                <th>9</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-              <tr class="row10">
-                <th>10</th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-                <th><input type="text"></th>
-              </tr>
-            </table>
-            <br></br>
-            <button type="submit" name="submit">Save Pattern</button>
-            <br></br>
-          </form>
+
         </div>
 
       </div>
@@ -314,7 +169,7 @@
   </div>
 
   <footer class="footer">
-    CopyRight & Design @ Hadley Sweck 2017
+    Created & Designed by Hadley Sweck (2017)
   </footer>
 
 </body>

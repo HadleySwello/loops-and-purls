@@ -3,12 +3,14 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const views = require('./views')
+const events = require('./auth/events.js')
 
 $(() => {
   setAPIOrigin(location, config)
 })
 
 $(() => {
+  // /////views///// //
   $('#landingPageBtn').click(function () {
     views.openTab(event, 'landingPage')
   })
@@ -21,11 +23,12 @@ $(() => {
   $('#myPatternsPageBtn').click(function () {
     views.openTab(event, 'myPatternsPage')
   })
+  // ////functionality//// //
+  $('#sign-up').on('submit', events.onSignUp)
+  $('#sign-in').on('submit', events.onSignIn)
+  $('.sign-out').on('click', events.onSignOut)
+  $('#chart-form').on('submit', events.onCreateChart)
+  $('#myPatternsPageBtn').on('click', events.onGetChartList)
 })
 
-// onclick="openTab(event, 'landingPage')"
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
+$(document).on('click', '.patternDeleteButton', events.onDeleteChart)
