@@ -1,22 +1,17 @@
 <div>
   <form id="chart-form">
-    <table>
-      <tr class="row-header">
-        <th>*</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>10</th>
-      </tr>
-      <th><input type="text" value="-" name="chart" id="{{cellId}}"></th>
-      <tr>
-      </tr>
+    <table id="pattern-table">
+      {{#each cellData}}
+        <tr class="row-header" id="{{@key}}">
+           {{#each this}}
+            {{#if @key = 0 && @index = 0}}
+              <td>{{@key}}{{@index}}</td>
+              {{#else}}
+              <td><input id="cell{{@key}}{{@index}}" value="{{this}}"/></td>
+              {{/if}}
+            {{/each}}
+        </tr>
+      {{/each}}
     </table>
   </form>
 </div>

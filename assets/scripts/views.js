@@ -1,6 +1,6 @@
 'use strict'
 
-function openTab (evt, cityName) {
+function openTab (evt, tabName) {
   // Get all elements with class="tabcontent" and hide them
   const tabcontent = document.getElementsByClassName('tabcontent')
   for (let i = 0; i < tabcontent.length; i++) {
@@ -14,7 +14,7 @@ function openTab (evt, cityName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = 'block'
+  document.getElementById(tabName).style.display = 'block'
   evt.currentTarget.className += ' active'
   console.log('third function in views')
 }

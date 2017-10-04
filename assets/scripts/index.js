@@ -4,6 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const views = require('./views')
 const events = require('./auth/events.js')
+const handlebars = require('./handlebars-data')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -24,6 +25,7 @@ $(() => {
     views.openTab(event, 'myPatternsPage')
   })
   // ////functionality//// //
+  $('#chartPageBtn').on('click', handlebars.chartLogic)
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
   $('.sign-out').on('click', events.onSignOut)
