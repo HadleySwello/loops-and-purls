@@ -1,4 +1,6 @@
-const patternHandlebars = function(patternName, dataId) {
+const Handlebars = require('handlebars')
+
+const patternHandlebars = function (patternName, dataId) {
   const patternHandlebarsTemplate = require('./templates/list-of-patterns.handlebars')
   const context = {
     'patternName': patternName,
@@ -8,23 +10,52 @@ const patternHandlebars = function(patternName, dataId) {
   $('#empty-pattern-list').append(patternTemplate)
 }
 
-const chartHandlebars = function(dataObj) {
+// Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
+//   switch (operator) {
+//     case '==':
+//       return (v1 == v2) ? options.fn(this) : options.inverse(this)
+//     case '===':
+//       return (v1 === v2) ? options.fn(this) : options.inverse(this)
+//     case '!==':
+//       return (v1 !== v2) ? options.fn(this) : options.inverse(this)
+//     case '<':
+//       return (v1 < v2) ? options.fn(this) : options.inverse(this)
+//     case '<=':
+//       return (v1 <= v2) ? options.fn(this) : options.inverse(this)
+//     case '>':
+//       return (v1 > v2) ? options.fn(this) : options.inverse(this)
+//     case '>=':
+//       return (v1 >= v2) ? options.fn(this) : options.inverse(this)
+//     case '&&':
+//       return (v1 && v2) ? options.fn(this) : options.inverse(this)
+//     case '||':
+//       return (v1 || v2) ? options.fn(this) : options.inverse(this)
+//     default:
+//       return options.inverse(this)
+//   }
+// })
+
+const chartHandlebars = function (dataObj, headerRow) {
   const chartHandlebarsTemplate = require('./templates/chart.handlebars')
   const context = {
-    'cellData': dataObj
+    'cellData': dataObj,
+    'headerRow': headerRow
   }
   const chartTemplate = chartHandlebarsTemplate(context)
   $('#chart').append(chartTemplate)
 }
 
-const chartLogic = function() {
+const chartLogic = function () {
   // chart constraints
-  const height = 11
-  const width = 11
+  const height = 10
+  const width = 10
 
   // generate default cell object
   const emptyCells = Array(width).fill('-')
+  emptyCells.unshift(' ')
   const dataObj = {}
+  const headerRow = Array(width + 1).fill().map((value, i) => i)
+  // dataObj['topHeader'] = Array(width + 1).fill().map((value, i) => i)
   for (let row = 0; row < height; row++) {
     dataObj['row' + row] = emptyCells
   }
@@ -33,41 +64,8 @@ const chartLogic = function() {
   $('#chart').empty()
 
   // set up the template
-  chartHandlebars(dataObj)
+  chartHandlebars(dataObj, headerRow)
 }
-
-(function() {
-  function checkCondition(v1, operator, v2) {
-    switch (operator) {
-      case '==':
-        return (v1 == v2)
-      case '===':
-        return (v1 === v2)
-      case '!==':
-        return (v1 !== v2)
-      case '<':
-        return (v1 < v2)
-      case '<=':
-        return (v1 <= v2)
-      case '>':
-        return (v1 > v2)
-      case '>=':
-        return (v1 >= v2)
-      case '&&':
-        return (v1 && v2)
-      case '||':
-        return (v1 || v2)
-      default:
-        return false;
-    }
-  }
-
-  Handlebars.registerHelper('ifCond', function(v1, operator, v2, options) {
-    return checkCondition(v1, operator, v2) ?
-      options.fn(this) :
-      options.inverse(this)
-  })
-}())
 
 module.exports = {
   patternHandlebars,

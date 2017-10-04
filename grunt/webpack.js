@@ -75,7 +75,15 @@ module.exports = {
           query: {
             helperDirs: [
               path.join(__dirname, '/../assets/scripts/templates/helpers')
-            ]
+            ],
+            handlebarsLoader: {
+              helperResolver: function (helper, callback) {
+                // should pass the helper's path on disk
+                // to the callback if one was found for the given parameter.
+                // Callback accepts (err, locationOnDisk)
+                // Otherwise just call the callback without any arguments
+              }
+            }
           }
         }
       ]
