@@ -80,12 +80,7 @@ const createChart = (data) => {
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
-    data: {
-      'pattern': {
-        'title': data.title,
-        'chart': data.chart
-      }
-    }
+    data
   })
 }
 

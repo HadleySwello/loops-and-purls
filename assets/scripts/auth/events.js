@@ -1,6 +1,7 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const concat = require('../concat-logic')
 // const handlebars = require('../handlebars-data')
 
 const onSignUp = function (event) {
@@ -54,8 +55,8 @@ const onDeleteChart = function (event) {
 }
 
 const onCreateChart = function (event) {
-  const data = getFormFields(this)
   event.preventDefault()
+  const data = concat.getChartData()
   api.createChart(data)
     .then(ui.createChartSuccess)
     .catch(ui.createChartFailure)

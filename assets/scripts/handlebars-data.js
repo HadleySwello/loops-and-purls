@@ -1,4 +1,4 @@
-const Handlebars = require('handlebars')
+// const Handlebars = require('handlebars')
 
 const patternHandlebars = function (patternName, dataId) {
   const patternHandlebarsTemplate = require('./templates/list-of-patterns.handlebars')
@@ -52,14 +52,13 @@ const chartLogic = function () {
 
   // generate default cell object
   const emptyCells = Array(width).fill('-')
-  emptyCells.unshift(' ')
+  // emptyCells.unshift(' ')
   const dataObj = {}
   const headerRow = Array(width + 1).fill().map((value, i) => i)
   // dataObj['topHeader'] = Array(width + 1).fill().map((value, i) => i)
   for (let row = 0; row < height; row++) {
-    dataObj['row' + row] = emptyCells
+    dataObj['row' + row] = {index: row + 1, data: emptyCells}
   }
-
   // clear the chart
   $('#chart').empty()
 

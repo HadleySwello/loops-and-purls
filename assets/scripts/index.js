@@ -5,6 +5,7 @@ const config = require('./config')
 const views = require('./views')
 const events = require('./auth/events.js')
 const handlebars = require('./handlebars-data')
+// const concat = require('./concat-logic')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -29,8 +30,12 @@ $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
   $('.sign-out').on('click', events.onSignOut)
-  $('#chart-form').on('submit', events.onCreateChart)
   $('#myPatternsPageBtn').on('click', events.onGetChartList)
 })
 
-$(document).on('click', '.patternDeleteButton', events.onDeleteChart)
+// $('#clickMeh').click(function () {
+//   alert("I BEEN CLICKEd")
+//   events.onCreateChart()
+// })
+$(document).on('click', '#clickMeh', events.onCreateChart)
+$(document).on('submit', '.patternDeleteButton', events.onDeleteChart)
