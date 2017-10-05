@@ -21,8 +21,6 @@ const signIn = (data) => {
 }
 
 const changePassword = (data) => {
-  console.log(data.credentials.old)
-  console.log(data.credentials.new)
   return $.ajax({
     url: app.host + '/change-password/' + app.user.id,
     headers: {
@@ -39,7 +37,6 @@ const changePassword = (data) => {
 }
 
 const signOut = (data) => {
-  console.log(data)
   return $.ajax({
     url: app.host + '/sign-out/' + app.user.id,
     method: 'DELETE',
@@ -63,7 +60,6 @@ const getChartList = () => {
 }
 
 const deleteChart = (dataId) => {
-  console.log(dataId)
   return $.ajax({
     url: app.host + '/patterns/' + dataId,
     method: 'DELETE',
@@ -91,8 +87,10 @@ const createChart = (data, pattern) => {
 }
 
 const updateChart = (dataId, title) => {
+  console.log(dataId + ' is dataId')
+  console.log(title + ' is title')
   return $.ajax({
-    url: app.host + '/patterns/' + app.user.id,
+    url: app.host + '/patterns/' + dataId,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
