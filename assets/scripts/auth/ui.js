@@ -86,6 +86,16 @@ const createChartFailure = (error) => {
   console.log('Failed in createChartFailure')
 }
 
+const updateChartSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded in updateChartSuccess')
+}
+
+const updateChartFailure = (error) => {
+  console.log(error)
+  console.log('Failed in updateChartFailure')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -100,5 +110,7 @@ module.exports = {
   deleteChartSuccess,
   deleteChartFailure,
   createChartSuccess,
-  createChartFailure
+  createChartFailure,
+  updateChartSuccess,
+  updateChartFailure
 }

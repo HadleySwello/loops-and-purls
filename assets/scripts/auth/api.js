@@ -90,6 +90,23 @@ const createChart = (data, pattern) => {
   })
 }
 
+const updateChart = (dataId, title) => {
+  return $.ajax({
+    url: app.host + '/patterns/' + app.user.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'pattern': {
+        'id': dataId,
+        'user_id': app.user.id,
+        'title': title
+      }
+    }
+  })
+}
+
 module.exports = {
   getFormFields,
   signUp,
@@ -98,5 +115,6 @@ module.exports = {
   signOut,
   getChartList,
   deleteChart,
-  createChart
+  createChart,
+  updateChart
 }

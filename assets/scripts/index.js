@@ -39,3 +39,4 @@ $(() => {
 // })
 $(document).on('click', '#clickMeh', events.onCreateChart)
 $(document).on('submit', '.patternDeleteButton', events.onDeleteChart)
+$(document).on('submit', '#update-title', events.onUpdateChart)
