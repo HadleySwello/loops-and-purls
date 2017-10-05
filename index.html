@@ -27,6 +27,7 @@
   <div id="landingPage" class="tabcontent">
     <div class="row">
       <div class="col-md-2 sidebar">
+        <p id="message"></p>
         <h2>Symbol Key</h2>
         <ul>
           <li> - : Knit</li>
@@ -38,7 +39,9 @@
         </ul>
 
         <br></br>
+
         <button type="button" class="sign-out">Sign Out</button>
+
         <br></br>
 
       </div>
@@ -55,9 +58,9 @@
             <br><br>
             <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Create Password">
             <br><br>
-            <input class="pass-confir-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input class="pass-confirm-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
             <br><br>
-            <button class="signup-button btn-default" type="submit" name="submit" value="Sign Up!">Sign Up!</button>
+            <button class="sign-up-button btn-default" id="sign-up-button" type="submit" name="submit" value="Sign Up!">Sign Up!</button>
           </fieldset>
         </form>
 
@@ -68,8 +71,9 @@
             <br><br>
             <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Password">
             <br><br>
-            <button class="signin-button btn-default" type="submit" id="sign-in-button" name="submit" value="Sign In!">Sign In!</button>
+            <button class="sign-in-button btn-default" type="submit" id="sign-in-button" name="submit" value="Sign In!">Sign In!</button>
           </fieldset>
+          <br></br>
         </form>
 
       </div>
@@ -96,10 +100,10 @@
       </div>
       <div class="col-md-10 content">
         <div class="row text-center">
-          <h3 class="col-md-12">About The Site!</h3>
+          <h3 class="col-md-12 header">About The Site!</h3>
         </div>
-        <p>I will write all about the site.</p>
-
+        <br></br>
+        <p class="aboutpara">This web app was developed to help knitters who want to take pattern creation into their own hands! You can make a standard 10x10 graph pattern and be able to save and update it. Soon you can even print out your pattern into an easily readable paragraph for those who have trouble with charts. Unfortunately there is only one pattern size at the moment but soon I will add updates that add different pattern sizes and a screen shot option so you can save a copy of your pattern right to your computer! As more updates come up and new features get added please check back to see what’s in store!</p>
       </div>
     </div>
   </div>
@@ -124,9 +128,12 @@
       </div>
       <div class="col-md-10 content">
         <div class="row text-center">
-          <h3 class="col-md-12">Let's Get Designing!</h3>
+          <h3 class="col-md-12 header">Let's Get Designing!</h3>
         </div>
-        <p>Here is where the chart will go.</p>
+
+        <div id="chart" class="chart">
+
+        </div>
 
       </div>
     </div>
@@ -152,16 +159,17 @@
       </div>
       <div class="col-md-10 content">
         <div class="row text-center">
-          <h3 class="col-md-12">Here Are Your Patterns!</h3>
+          <h3 class="col-md-12 header">Here Are Your Patterns!</h3>
         </div>
-        <p>Here is where the chart will go.</p>
+
+        <div id="empty-pattern-list"></div>
 
       </div>
     </div>
   </div>
 
   <footer class="footer">
-    CopyRight & Design @ Hadley Sweck 2017
+    Created & Designed by Hadley Sweck (2017)
   </footer>
 
 </body>

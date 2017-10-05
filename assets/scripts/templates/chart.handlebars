@@ -1,0 +1,21 @@
+<div>
+  <form class="chart-form">
+    <table id="pattern-table">
+      <tr class="headerRow">
+        {{#each headerRow}}
+          <td>{{this}}</td>
+        {{/each}}
+      </tr>
+      {{#each cellData}}
+        <tr id="{{@key}}">
+          <td class="rowLabel">{{this.index}}</td>
+          {{#each this.data}}
+            <td><input id="row{{../this.index}}cell{{@index}}" value="{{this}}" /></td>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </table>
+    <input id="title-input" name="title" placeholder="Title">
+    <button type="submit" id="clickMeh" value="Submit">Submit</button>
+  </form>
+</div>
