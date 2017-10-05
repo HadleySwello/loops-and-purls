@@ -12,7 +12,7 @@ const signUpSuccess = (data) => {
 
 const signUpFailure = (error) => {
   console.log(error)
-  console.log('failed to signUp')
+  console.log('Nice Try Dude: signUp')
 }
 
 const signInSuccess = (data) => {
@@ -24,7 +24,7 @@ const signInSuccess = (data) => {
 
 const signInFailure = (error) => {
   console.log(error)
-  $('#message').html('Invalid password')
+  $('#message').html('Nice Try Dude: Invalid password')
 }
 
 const changePasswordSuccess = (data) => {
@@ -34,7 +34,7 @@ const changePasswordSuccess = (data) => {
 
 const changePasswordfailure = (error) => {
   console.log(error)
-  $('#message').html('Invalid OLD password.')
+  $('#message').html('Nice Try Dude: Invalid OLD password.')
 }
 
 const logOutSuccess = (data) => {
@@ -45,7 +45,7 @@ const logOutSuccess = (data) => {
 
 const logOutFailure = (error) => {
   console.log(error)
-  console.log('Failed in logOutFailure')
+  console.log('Nice Try Dude: logOutFailure')
 }
 
 const getChartListSuccess = (data) => {
@@ -63,7 +63,7 @@ const getChartListSuccess = (data) => {
 
 const getChartListFailure = (error) => {
   console.log(error)
-  console.log('Failed in getChartListFailure')
+  console.log('Nice Try Dude: getChartListFailure')
 }
 
 const deleteChartSuccess = (data) => {
@@ -73,7 +73,7 @@ const deleteChartSuccess = (data) => {
 
 const deleteChartFailure = (error) => {
   console.log(error)
-  console.log('Failed in deleteChartFailure')
+  console.log('Nice Try Dude: deleteChartFailure')
 }
 
 const createChartSuccess = (data) => {
@@ -83,7 +83,7 @@ const createChartSuccess = (data) => {
 
 const createChartFailure = (error) => {
   console.log(error)
-  console.log('Failed in createChartFailure')
+  console.log('Nice Try Dude: createChartFailure')
 }
 
 const updateChartSuccess = (data) => {
@@ -93,7 +93,7 @@ const updateChartSuccess = (data) => {
 
 const updateChartFailure = (error) => {
   console.log(error)
-  console.log('Failed in updateChartFailure')
+  console.log('Nice Try Dude: updateChartFailure')
 }
 
 module.exports = {
