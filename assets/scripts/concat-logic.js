@@ -1,16 +1,16 @@
 'use strict'
 
-const getChartData = function (event) {
-  alert('STOP IT')
-  event.preventDefault()
-  const pattern = {}
+const getChartData = function () {
+  const patternJson = {}
+  patternJson['pattern'] = {}
   const rowData = $('#chart').find('tr:not(.headerRow)')
-  pattern['title'] = $('#title-input').val()
+  patternJson.pattern['title'] = $('#title-input').val()
+  patternJson.pattern['chart'] = {}
   for (let i = 0; i < rowData.length; i++) {
-    pattern['row' + i] = getRowData(rowData[i])
+    patternJson.pattern.chart['row' + i] = getRowData(rowData[i])
   }
-  console.log(JSON.stringify(pattern))
-  return JSON.stringify(pattern)
+  console.log(patternJson)
+  return (patternJson)
 }
 
 const getRowData = function (row) {
@@ -21,6 +21,7 @@ const getRowData = function (row) {
     return $(input).val()
   })
   delete inputValue.prevObject
+  delete inputValue['length']
   return inputValue
 }
 

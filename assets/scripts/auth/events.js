@@ -57,7 +57,8 @@ const onDeleteChart = function (event) {
 const onCreateChart = function (event) {
   event.preventDefault()
   const data = concat.getChartData()
-  api.createChart(data)
+  const pattern = JSON.stringify(data.pattern.chart)
+  api.createChart(data, pattern)
     .then(ui.createChartSuccess)
     .catch(ui.createChartFailure)
 }

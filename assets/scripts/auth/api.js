@@ -73,14 +73,20 @@ const deleteChart = (dataId) => {
   })
 }
 
-const createChart = (data) => {
+const createChart = (data, pattern) => {
   return $.ajax({
     url: app.host + '/patterns/',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
-    data
+    data: {
+      'pattern': {
+        'user_id': app.user.id,
+        'title': data.pattern.title,
+        'chart': pattern
+      }
+    }
   })
 }
 
