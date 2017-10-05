@@ -6,26 +6,26 @@ READEME for Loops & Purls: A Knitting App
   <a href="https://imgur.com/RDKlxtj"><img src="https://i.imgur.com/RDKlxtj.png" title="source: imgur.com" /></a>
   <a href="https://imgur.com/TAO9XVZ"><img src="https://i.imgur.com/TAO9XVZ.png" title="source: imgur.com" /></a>
 2. Explanations of the technologies used
-  1. Handlebars
-  2. Javascript
-  3. JQuery
+  - Handlebars
+  - Javascript
+  - JQuery
 
 3. A couple paragraphs about the general approach you took
   I created a dynamically generated chart using a table which I nested a form inside of. Using handlebars I rendered it and then used it to submit the charts that people create. I also used tabs to create the multiple views on my page and allow people to navigate between different divs with ease. This is all connected to an Rails API I build and will link to further down in this READEME.
 
 4. Installation instructions for any dependencies
-  1. Fork Repo
-  2. Clone to local folder
-  3. NPM install
+  - Fork Repo
+  - Clone to local folder
+  - NPM install
 
 5. User stories
-  1. As a signed in user I want to be able to save my patterns so I can come back to them later.
-  2. As a signed in user I want to be able to edit my patterns name and have the changes save to my account.
-  3. As a signed in user I want to be able to see all my patterns listed.
-  4. As a signed in user I want to be able to delete patterns I don’t like anymore.
-  5. (IN PROGRESS) As a user of any type I want to be able to print my pattern so I can work off of it without needing my computer right there.
-  6. (IN PROGRESS) As a signed-in user I want to be able to see patterns other people have made.
-  7. (IN PROGRESS) As a user I want to be able to compile my graph into a paragraph form to make reading my pattern easier.
+  - As a signed in user I want to be able to save my patterns so I can come back to them later.
+  - As a signed in user I want to be able to edit my patterns name and have the changes save to my account.
+  - As a signed in user I want to be able to see all my patterns listed.
+  - As a signed in user I want to be able to delete patterns I don’t like anymore.
+  - (IN PROGRESS) As a user of any type I want to be able to print my pattern so I can work off of it without needing my computer right there.
+  - (IN PROGRESS) As a signed-in user I want to be able to see patterns other people have made.
+  - (IN PROGRESS) As a user I want to be able to compile my graph into a paragraph form to make reading my pattern easier.
 
 6. Wireframes – sketches of major views / interfaces in your application
   <a href="https://imgur.com/58ArJbT"><img src="https://i.imgur.com/58ArJbT.jpg" title="source: imgur.com" /></a>
