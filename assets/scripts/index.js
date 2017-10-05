@@ -33,10 +33,6 @@ $(() => {
   $('#myPatternsPageBtn').on('click', events.onGetChartList)
 })
 
-// $('#clickMeh').click(function () {
-//   alert("I BEEN CLICKEd")
-//   events.onCreateChart()
-// })
 $(document).on('click', '#clickMeh', events.onCreateChart)
-$(document).on('submit', '.patternDeleteButton', events.onDeleteChart)
+$(document).on('click', '.patternDeleteButton', events.onDeleteChart)
 $(document).on('submit', '#update-title', events.onUpdateChart)

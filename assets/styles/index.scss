@@ -17,6 +17,8 @@ html {
   button {
     background-color: inherit;
     border: 0;
+    font-family: 'Montez', cursive;
+    font-size: x-large;
     margin: auto;
     outline: none;
     padding: 14px 16px;
@@ -55,7 +57,15 @@ body {
     background-color: $sandy-brown;
     border-color: $davys-grey;
     color: $davys-grey;
+    font-family: 'Delius Unicase', cursive;
   }
+}
+
+.btn-default {
+  background-color: $sandy-brown;
+  border-color: $davys-grey;
+  color: $davys-grey;
+  font-family: 'Delius Unicase', cursive;
 }
 
 .footer {
@@ -82,7 +92,15 @@ body {
 }
 
 h1 {
+  font-family: 'Montez', cursive;
+  font-size: 400%;
   text-align: center;
+}
+
+h2,
+h3 {
+  font-family: 'Montez', cursive;
+  font-size: x-large;
 }
 
 th,
@@ -97,6 +115,13 @@ td {
     text-align: center;
     width: 40px;
   }
+}
+
+p,
+legend,
+ul {
+  font-family: 'Delius Unicase', cursive;
+  font-size: medium;
 }
 
 .aboutpara {
