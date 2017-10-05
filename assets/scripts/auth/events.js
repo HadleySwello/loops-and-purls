@@ -63,6 +63,16 @@ const onCreateChart = function (event) {
     .catch(ui.createChartFailure)
 }
 
+const onUpdateChart = function (event) {
+  event.preventDefault()
+  const dataId = this.getAttribute('data-id')
+  const title = getFormFields(this).title
+  console.log('update dataId = ' + dataId)
+  api.updateChart(dataId, title)
+    .then(ui.updateChartSuccess)
+    .catch(ui.updateChartFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -70,5 +80,6 @@ module.exports = {
   onChangePassword,
   onGetChartList,
   onDeleteChart,
-  onCreateChart
+  onCreateChart,
+  onUpdateChart
 }
