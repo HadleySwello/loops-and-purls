@@ -35,8 +35,7 @@ READEME for Loops & Purls: A Knitting App
   <a href="https://imgur.com/GtwQf99"><img src="https://i.imgur.com/GtwQf99.jpg" title="source: imgur.com" /></a>
 
 8. Descriptions of any unsolved problems or major hurdles you had to overcome
-  So there are more than a few things I am still working on. Firstly I want to be able to compile a paragraph of the inputs from your graph. Then I want to write code so that when you save your pattern it saves as an img that you can download and print out so that you don't need to screen shot your pattern yourself. Then I want to add in option for the chart size so you can customise exactly how big you'd like your chart to be.
-  Finnaly I would like to add in a feature that allows you to look at and download other peoples patterns so it becomes more of a social pattern sharing app.
+  - So there are more than a few things I am still working on. Firstly I want to be able to compile a paragraph of the inputs from your graph. Then I want to write code so that when you save your pattern it saves as an img that you can download and print out so that you don't need to screen shot your pattern yourself. Then I want to add in option for the chart size so you can customise exactly how big you'd like your chart to be. Finnaly I would like to add in a feature that allows you to look at and download other peoples patterns so it becomes more of a social pattern sharing app.
 
 ## [License](LICENSE)
 
