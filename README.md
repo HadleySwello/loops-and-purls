@@ -11,7 +11,7 @@ READEME for Loops & Purls: A Knitting App
   - JQuery
 
 3. A couple paragraphs about the general approach you took
-  - I created a dynamically generated chart using a table which I nested a form inside of. Using handlebars I rendered it and then used it to submit the charts that people create. I also used tabs to create the multiple views on my page and allow people to navigate between different divs with ease. This is all connected to an Rails API I build and is linked to here:
+  - I created a dynamically generated chart using a table which I nested a form inside of. Using handlebars I rendered it and then used it to submit the charts that people create. I also used tabs to create the multiple views on my page and allow people to navigate between different divs with ease. This is all connected to an Rails API I built and is linked to here:
   - https://github.com/Hadleyana/loops-and-purls-back-end
 
 4. Installation instructions for any dependencies
