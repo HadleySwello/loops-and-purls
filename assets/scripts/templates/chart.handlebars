@@ -13,7 +13,7 @@
         <tr id="{{@key}}">
           <td class="rowLabel">{{this.index}}</td>
           {{#each this.data}}
-            <td><input id="row{{../this.index}}cell{{@index}}" value="{{this}}" /></td>
+            <td><input class="cell" id="row{{../this.index}}cell{{@index}}" value="{{this}}" /></td>
           {{/each}}
         </tr>
       {{/each}}

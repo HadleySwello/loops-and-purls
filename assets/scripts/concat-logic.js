@@ -25,6 +25,33 @@ const getRowData = function (row) {
   return inputValue
 }
 
+const compilePattern = function () {
+  $('#empty-pattern-write-up').empty()
+  const patternArray = []
+  for (let i = 1; i < 11; i++) {
+    for (let j = 0; j < 10; j++) {
+      const value = $('#row' + [i] + 'cell' + [j]).val()
+      patternArray.push(value)
+    }
+  }
+  console.log(patternArray)
+  for (let h = 0; h < patternArray.length; h++) {
+    if (patternArray[h] === '-') {
+      patternArray[h] = 'Knit 1 '
+      console.log('# [h] is ' + patternArray[h])
+    } else if (patternArray[h] === '.') {
+      patternArray[h] = 'Purl 1 '
+    } else {
+      patternArray[h] = patternArray[h] + ' '
+    }
+  }
+  console.log(patternArray)
+  const patternString = patternArray.toString()
+  console.log(patternString)
+  $('#empty-pattern-write-up').append(patternString)
+}
+
 module.exports = {
-  getChartData
+  getChartData,
+  compilePattern
 }

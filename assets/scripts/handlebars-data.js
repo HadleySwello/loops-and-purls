@@ -10,31 +10,6 @@ const patternHandlebars = function (patternName, dataId) {
   $('#empty-pattern-list').append(patternTemplate)
 }
 
-// Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
-//   switch (operator) {
-//     case '==':
-//       return (v1 == v2) ? options.fn(this) : options.inverse(this)
-//     case '===':
-//       return (v1 === v2) ? options.fn(this) : options.inverse(this)
-//     case '!==':
-//       return (v1 !== v2) ? options.fn(this) : options.inverse(this)
-//     case '<':
-//       return (v1 < v2) ? options.fn(this) : options.inverse(this)
-//     case '<=':
-//       return (v1 <= v2) ? options.fn(this) : options.inverse(this)
-//     case '>':
-//       return (v1 > v2) ? options.fn(this) : options.inverse(this)
-//     case '>=':
-//       return (v1 >= v2) ? options.fn(this) : options.inverse(this)
-//     case '&&':
-//       return (v1 && v2) ? options.fn(this) : options.inverse(this)
-//     case '||':
-//       return (v1 || v2) ? options.fn(this) : options.inverse(this)
-//     default:
-//       return options.inverse(this)
-//   }
-// })
-
 const chartHandlebars = function (dataObj, headerRow) {
   const chartHandlebarsTemplate = require('./templates/chart.handlebars')
   const context = {

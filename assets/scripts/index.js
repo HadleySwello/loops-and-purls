@@ -5,6 +5,7 @@ const config = require('./config')
 const views = require('./views')
 const events = require('./auth/events.js')
 const handlebars = require('./handlebars-data')
+const concat = require('./concat-logic')
 // const concat = require('./concat-logic')
 
 $(() => {
@@ -33,6 +34,7 @@ $(() => {
   $('#myPatternsPageBtn').on('click', events.onGetChartList)
 })
 
+$(document).on('click', '#compileBtn', concat.compilePattern)
 $(document).on('click', '#clickMeh', events.onCreateChart)
 $(document).on('click', '.patternDeleteButton', events.onDeleteChart)
 $(document).on('submit', '#update-title', events.onUpdateChart)
