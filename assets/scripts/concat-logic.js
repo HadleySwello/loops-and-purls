@@ -1,6 +1,6 @@
 'use strict'
 
-const getChartData = function() {
+const getChartData = function () {
   const patternJson = {}
   patternJson['pattern'] = {}
   const rowData = $('#chart').find('tr:not(.headerRow)')
@@ -13,7 +13,7 @@ const getChartData = function() {
   return (patternJson)
 }
 
-const getRowData = function(row) {
+const getRowData = function (row) {
   const inputArray = $(row).find('td:not(.rowLabel) input')
   delete inputArray.prevObject
   // console.log($(row))
