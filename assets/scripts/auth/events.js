@@ -58,7 +58,9 @@ const onCreateChart = function (event) {
   event.preventDefault()
   const data = concat.getChartData()
   const pattern = JSON.stringify(data.pattern.chart)
-  api.createChart(data, pattern)
+  const paragraph = $('#empty-pattern-write-up').html()
+  console.log(paragraph)
+  api.createChart(data, paragraph, pattern)
     .then(ui.createChartSuccess)
     .catch(ui.createChartFailure)
 }

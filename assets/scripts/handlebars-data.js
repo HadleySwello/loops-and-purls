@@ -1,9 +1,10 @@
 // const Handlebars = require('handlebars')
 
-const patternHandlebars = function (patternName, dataId) {
+const patternHandlebars = function (patternName, paragraph, dataId) {
   const patternHandlebarsTemplate = require('./templates/list-of-patterns.handlebars')
   const context = {
     'patternName': patternName,
+    'paragraph': paragraph,
     'dataId': dataId
   }
   const patternTemplate = patternHandlebarsTemplate(context)

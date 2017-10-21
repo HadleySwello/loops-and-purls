@@ -55,9 +55,10 @@ const getChartListSuccess = (data) => {
   $('#empty-pattern-list').empty()
   for (let i = 0; i < data.patterns.length; i++) {
     const patternName = data.patterns[i].title
+    const paragraph = data.patterns[i].paragraph
     console.log(patternName)
     const dataId = data.patterns[i].id
-    template.patternHandlebars(patternName, dataId)
+    template.patternHandlebars(patternName, paragraph, dataId)
   }
 }
 

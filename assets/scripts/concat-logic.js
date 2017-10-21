@@ -34,21 +34,73 @@ const compilePattern = function () {
       patternArray.push(value)
     }
   }
-  console.log(patternArray)
   for (let h = 0; h < patternArray.length; h++) {
     if (patternArray[h] === '-') {
-      patternArray[h] = 'Knit 1 '
-      console.log('# [h] is ' + patternArray[h])
+      patternArray[h] = ' Knit 1'
     } else if (patternArray[h] === '.') {
-      patternArray[h] = 'Purl 1 '
+      patternArray[h] = ' Purl 1'
+    } else if (patternArray[h] === '/') {
+      patternArray[h] = 'K2Tog '
+    } else if (patternArray[h] === '\\') {
+      patternArray[h] = 'SSK '
+    } else if (patternArray[h] === 'O') {
+      patternArray[h] = 'Yarn Over '
+    } else if (patternArray[h] === '0') {
+      patternArray[h] = 'Yarn Over '
+    } else if (patternArray[h] === '^') {
+      patternArray[h] = 'Sl1, K2Tog, PSSO '
+    } else if (patternArray[h] === 'o') {
+      patternArray[h] = 'Yarn Over '
     } else {
       patternArray[h] = patternArray[h] + ' '
     }
   }
-  console.log(patternArray)
-  const patternString = patternArray.toString()
-  console.log(patternString)
-  $('#empty-pattern-write-up').append(patternString)
+  // convert Array to Object
+  const obj = patternArray.reduce((acc, cur, i) => {
+    acc[i] = cur
+    return acc
+  }, {})
+  // console.log('obj original is ' + obj)
+  // look Through each key/value
+  for (const key in obj) {
+    if (obj[key] === 'knit 1' && obj[key - 1] !== undefined) {
+      // if first four character match
+      if (obj[key].substring(0, 4) === obj[key - 1].substring(0, 4)) {
+        obj[key] = 'knit ' +
+          (Number(obj[key].substring(5)) + Number(obj[key - 1].substring(5)))
+        // creates empty value instead of deleteing
+        obj[key[0] - 1] = ''
+      }
+    }
+    if (obj[key] === 'purl 1') {
+      if (obj[key] === obj[key - 1]) {
+        obj[key] = 'purl ' +
+          (Number(obj[key].substring(5)) + Number(obj[key - 1].substring(5)))
+        obj[key[0] - 1] = ''
+      }
+    } if (obj[key] !== 'Purl 1' || 'Knit 1') {
+      obj[key] = obj[key]
+    }
+  }
+  // console.log('obj after is ' + obj)
+  // convert to array
+  const result = Object.keys(obj).map(function (key) {
+    // console.log([obj[key]])
+    return [obj[key]]
+  })
+  // console.log('result original is ' + result)
+  // flattens array
+  const flattened = result.reduce((a, b) => {
+    return a.concat(b)
+  })
+  // console.log('result flattened is ' + flattened)
+  // filters out '' values
+  const final = flattened.filter((item) => {
+    if (item !== '') return true
+  })
+  console.log('final is ' + final)
+  $('#empty-pattern-write-up').append(final)
+  return final
 }
 
 module.exports = {
