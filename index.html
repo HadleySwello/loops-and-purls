@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops & Purls</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase|Montez" rel="stylesheet">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <h1>Loops & Purls</h1>
+  <br></br>
+  <!-- navbar -->
+  <div class="tab">
+    <button id="landingPageBtn" class="tablinks">Welcome</button>
+    <button id="aboutPageBtn" class="tablinks">About</button>
+    <button id="chartPageBtn" class="tablinks">Chart Maker</button>
+    <button id="myPatternsPageBtn" class="tablinks">Your Patterns</button>
+  </div>
+  <br></br>
+  <!-- div one -->
+  <div id="landingPage" class="tabcontent">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <p id="message"></p>
+        <h2>Symbol Key</h2>
+        <ul>
+          <li> - : Knit</li>
+          <li> . : Purl</li>
+          <li> / : K2Tog</li>
+          <li> \ : SSK</li>
+          <li> O : Yarn Over</li>
+          <li> ^ : Sl1, K2Tog, PSSO</li>
+        </ul>
+
+        <br></br>
+
+        <button type="button" class="sign-out">Sign Out</button>
+
+        <br></br>
+
+      </div>
+      <div class="col-md-10 content">
+        <div class="row text-center">
+          <h3 class="col-md-12">Welcome!</h3>
+        </div>
+        <p>Sign In or Sign Up to Save Your Patterns</p>
+
+        <form id="sign-up" class="sign-up">
+          <fieldset>
+            <legend>Sign Up Below</legend>
+            <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
+            <br><br>
+            <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Create Password">
+            <br><br>
+            <input class="pass-confirm-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <br><br>
+            <button class="sign-up-button btn-default" id="sign-up-button" type="submit" name="submit" value="Sign Up!">Sign Up!</button>
+          </fieldset>
+        </form>
+
+        <form id="sign-in" class="sign-in">
+          <fieldset>
+            <legend>Login Below</legend>
+            <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
+            <br><br>
+            <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Password">
+            <br><br>
+            <button class="sign-in-button btn-default" type="submit" id="sign-in-button" name="submit" value="Sign In!">Sign In!</button>
+          </fieldset>
+          <br></br>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="aboutPage" class="tabcontent">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <h2>Symbol Key</h2>
+        <ul>
+          <li> - : Knit</li>
+          <li> . : Purl</li>
+          <li> / : K2Tog</li>
+          <li> \ : SSK</li>
+          <li> O : Yarn Over</li>
+          <li> ^ : Sl1, K2Tog, PSSO</li>
+        </ul>
+
+        <br></br>
+        <button type="button" class="sign-out">Sign Out</button>
+        <br></br>
+
+      </div>
+      <div class="col-md-10 content">
+        <div class="row text-center">
+          <h3 class="col-md-12 header">About The Site!</h3>
+        </div>
+        <br></br>
+        <p class="aboutpara">This web app was developed to help knitters who want to take pattern creation into their own hands! You can make a standard 10x10 graph pattern and be able to save and update it's title. Soon you can even print out your pattern into an easily readable paragraph for those who have trouble with charts. Unfortunately there is only one pattern size at the moment but soon I will add updates that add different pattern sizes and a screen shot option so you can save a copy of your pattern right to your computer! As more updates come up and new features get added please check back to see what’s in store!</p>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+    </div>
+  </div>
+
+  <div id="chartPage" class="tabcontent">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <h2>Symbol Key</h2>
+        <ul>
+          <li> - : Knit</li>
+          <li> . : Purl</li>
+          <li> / : K2Tog</li>
+          <li> \ : SSK</li>
+          <li> O : Yarn Over</li>
+          <li> ^ : Sl1, K2Tog, PSSO</li>
+        </ul>
+
+        <br></br>
+        <button type="button" class="sign-out">Sign Out</button>
+        <br></br>
+
+      </div>
+      <div class="col-md-10 content">
+        <div class="row text-center">
+          <h3 class="col-md-12 header">Let's Get Designing!</h3>
+        </div>
+        <div id="empty-pattern-write-up">
+        </div>
+        <button id="compileBtn" class="btn-default" name="compilePattern" value="Compile">Compile</button>
+        <div id="chart" class="chart">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="myPatternsPage" class="tabcontent">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <h2>Symbol Key</h2>
+        <ul>
+          <li> - : Knit</li>
+          <li> . : Purl</li>
+          <li> / : K2Tog</li>
+          <li> \ : SSK</li>
+          <li> O : Yarn Over</li>
+          <li> ^ : Sl1, K2Tog, PSSO</li>
+        </ul>
+
+        <br></br>
+        <button type="button" class="sign-out">Sign Out</button>
+        <br></br>
+
+      </div>
+      <div class="col-md-10 content">
+        <div class="row text-center">
+          <h3 class="col-md-12 header">Here Are Your Patterns!</h3>
+        </div>
+
+        <div id="empty-pattern-list"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    Created & Designed by Hadley Sweck (2017)
+  </footer>
+
+</body>
+
+</html>
