@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://still-mountain-92220.herokuapp.com'
+    production: 'https://dry-ocean-97313.herokuapp.com/'
   }
 }
 
